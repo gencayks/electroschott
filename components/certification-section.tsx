@@ -20,9 +20,9 @@ const certifications = [
 
 export function CertificationSection() {
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="py-16 sm:py-20 lg:py-28 bg-muted/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
@@ -46,10 +46,10 @@ export function CertificationSection() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <p className="text-sm font-semibold text-primary uppercase tracking-widest">
+            <p className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-widest">
               Qualität & Vertrauen
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
               Zertifizierter Entsorgungsfachbetrieb
             </h2>
             <div className="mt-4 w-12 h-1 bg-primary rounded-full" />

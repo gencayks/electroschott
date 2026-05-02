@@ -92,11 +92,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" className="bg-background">
       <body className="font-sans antialiased">
         <div className="min-h-screen bg-background flex flex-col">
           <Header />
-          <main className="flex-1 pt-[64px] sm:pt-[72px] lg:pt-[112px]">{children}</main>
+          <main className="flex-1 pt-[60px] sm:pt-[72px] lg:pt-[112px]">{children}</main>
           <Footer />
         </div>
         <Analytics />

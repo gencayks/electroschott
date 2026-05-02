@@ -7,7 +7,7 @@ import { CTASection } from "@/components/cta-section"
 
 export default function HomePage() {
   return (
-    <div className="-mt-[64px] sm:-mt-[72px] lg:-mt-[112px]">
+    <div className="-mt-[60px] sm:-mt-[72px] lg:-mt-[112px]">
       <HeroSection />
       <ServicesSection />
       <CertificationSection />

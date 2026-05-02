@@ -22,7 +22,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-16 pt-32 lg:px-8 lg:pb-24 lg:pt-40">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 pb-12 sm:pb-16 pt-28 sm:pt-32 lg:px-8 lg:pb-24 lg:pt-40">
         <div className="max-w-2xl">
           <div className="flex items-center gap-2 mb-6">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white ring-1 ring-inset ring-white/25 backdrop-blur-md">
@@ -31,7 +31,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white text-balance leading-tight">
             Ihr Partner für{" "}
             <span className="text-[#7c8aff]">Elektrorecycling</span>
           </h1>
@@ -64,19 +64,19 @@ export function HeroSection() {
           </div>
 
           {/* Trust badges */}
-          <div className="mt-12 flex flex-wrap gap-6">
+          <div className="mt-10 sm:mt-12 grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:gap-6">
             {[
               { icon: Shield, label: "DIN 66399", sub: "Zertifiziert" },
               { icon: Award, label: "ElektroG", sub: "Konform" },
               { icon: Truck, label: "Eigene", sub: "Logistik" },
             ].map((badge) => (
-              <div key={badge.label} className="flex items-center gap-3 group">
-                <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 backdrop-blur-sm ring-1 ring-white/15 group-hover:bg-white/20 group-hover:ring-white/30 transition-all">
-                  <badge.icon className="w-5 h-5 text-white" />
+              <div key={badge.label} className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-3 group">
+                <div className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/10 backdrop-blur-sm ring-1 ring-white/15 group-hover:bg-white/20 group-hover:ring-white/30 transition-all">
+                  <badge.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-white">{badge.label}</p>
-                  <p className="text-xs text-white/60">{badge.sub}</p>
+                <div className="text-center sm:text-left">
+                  <p className="text-xs sm:text-sm font-semibold text-white">{badge.label}</p>
+                  <p className="text-[10px] sm:text-xs text-white/60">{badge.sub}</p>
                 </div>
               </div>
             ))}

@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="rounded-2xl bg-card border border-border p-8 lg:p-16 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-16 sm:py-20 lg:py-28 bg-muted/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-card border border-border p-6 sm:p-8 lg:p-16 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
                 Sprechen Sie mit uns über Ihr Projekt
               </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Lassen Sie uns gemeinsam die beste Lösung für Ihre
                 Entsorgungsbedürfnisse finden. Kostenlose und unverbindliche
                 Beratung.

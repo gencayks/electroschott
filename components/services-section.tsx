@@ -39,22 +39,22 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest">
+    <section className="py-16 sm:py-20 lg:py-28 bg-background">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-widest">
             Unsere Leistungen
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+          <h2 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             Komplettlösungen für Ihr Unternehmen
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground leading-relaxed">
+          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-muted-foreground leading-relaxed px-2">
             Nutzen Sie unsere kostenlose und unverbindliche Beratung zu
             Lösungen und Konzepten im Sinne des ElektroG.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service) => (
             <Link
               key={service.title}
@@ -62,7 +62,7 @@ export function ServicesSection() {
               className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               {/* Image area */}
-              <div className="relative h-52 sm:h-60 overflow-hidden">
+              <div className="relative h-44 sm:h-52 md:h-60 overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -78,8 +78,8 @@ export function ServicesSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6 lg:p-8">
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-6 lg:p-8">
+                <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
