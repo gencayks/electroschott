@@ -1,7 +1,7 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Award, FileCheck, Download, CheckCircle2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
+import { Award, FileCheck, Download, CheckCircle2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const certifications = [
   {
@@ -16,7 +16,7 @@ const certifications = [
     title: "DIN 66399 Schutzklasse 3 zertifiziert",
     detail: "Höchste Sicherheitsstufe für Datenträgervernichtung",
   },
-]
+];
 
 export function CertificationSection() {
   return (
@@ -83,7 +83,7 @@ export function CertificationSection() {
                 asChild
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                <Link href="/zertifikate">
+                <Link href="/zertifikate.html">
                   <FileCheck className="mr-2 h-4 w-4" />
                   Alle Zertifikate einsehen
                 </Link>
@@ -99,5 +99,5 @@ export function CertificationSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

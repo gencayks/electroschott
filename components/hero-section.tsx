@@ -48,7 +48,7 @@ export function HeroSection() {
               size="lg"
               className="h-12 w-full bg-primary px-6 text-base text-primary-foreground shadow-lg hover:bg-primary/90 sm:w-auto sm:px-8"
             >
-              <Link href="/kontakt">
+              <Link href="/kontakt.html">
                 Kontakt aufnehmen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -59,7 +59,7 @@ export function HeroSection() {
               size="lg"
               className="h-12 w-full border-white/30 bg-white/5 px-6 text-base text-white backdrop-blur-sm hover:bg-white/10 hover:text-white sm:w-auto sm:px-8"
             >
-              <Link href="/leistungen">Unsere Leistungen</Link>
+              <Link href="/leistungen.html">Unsere Leistungen</Link>
             </Button>
           </div>
 

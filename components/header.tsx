@@ -10,11 +10,11 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Startseite", href: "/" },
-  { name: "Leistungen", href: "/leistungen" },
-  { name: "Philosophie", href: "/philosophie" },
-  { name: "Richtlinien", href: "/richtlinien" },
-  { name: "Zertifikate", href: "/zertifikate" },
-  { name: "Kontakt", href: "/kontakt" },
+  { name: "Leistungen", href: "/leistungen.html" },
+  { name: "Philosophie", href: "/philosophie.html" },
+  { name: "Richtlinien", href: "/richtlinien.html" },
+  { name: "Zertifikate", href: "/zertifikate.html" },
+  { name: "Kontakt", href: "/kontakt.html" },
 ];
 
 export function Header() {
@@ -174,7 +174,7 @@ export function Header() {
             asChild
             className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
           >
-            <Link href="/kontakt">
+            <Link href="/kontakt.html">
               Anfrage stellen
               <ChevronRight className="ml-1 w-4 h-4" />
             </Link>
@@ -298,7 +298,7 @@ export function Header() {
               asChild
               className="w-full bg-primary hover:bg-primary/90 active:bg-primary/80 text-primary-foreground h-14 text-base touch-manipulation"
             >
-              <Link href="/kontakt" onClick={closeMenu}>
+              <Link href="/kontakt.html" onClick={closeMenu}>
                 Anfrage stellen
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Link>

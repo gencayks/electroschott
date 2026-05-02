@@ -8,7 +8,7 @@ const services = [
     title: "Recycling",
     description:
       "Ob Hersteller, Vertreiber oder Erzeuger von Elektro- und/oder Elektronikaltgeräten – bei uns sind sie richtig!",
-    href: "/leistungen#recycling",
+    href: "/leistungen.html#recycling",
     image: "/electronic-recycling-facility-industrial.jpg",
   },
   {
@@ -16,7 +16,7 @@ const services = [
     title: "Datenträgervernichtung",
     description:
       "Vernichtung gemäß Bundesdatenschutzgesetz BDSG gemäß DIN 66399-2:2012-10: H5 und DS-GVO mit Vernichtungszertifikat.",
-    href: "/leistungen#datenvernichtung",
+    href: "/leistungen.html#datenvernichtung",
     image: "/team1.jpg",
   },
   {
@@ -24,7 +24,7 @@ const services = [
     title: "Industriedemontage",
     description:
       "Fachgerechtes Zerlegen und Entsorgung nicht mehr benötigter Maschinen und Anlagen.",
-    href: "/leistungen#industriedemontage",
+    href: "/leistungen.html#industriedemontage",
     image: "/whatsapp-image.jpg",
   },
   {
@@ -32,7 +32,7 @@ const services = [
     title: "Logistik",
     description:
       "Wir beladen unsere Fahrzeuge selbst und verfügen über eigene Gitterboxen und Container. Keinerlei Organisation erforderlich.",
-    href: "/leistungen#logistik",
+    href: "/leistungen.html#logistik",
     image: "/logistics-trucks-fleet-container-transport-recycli.jpg",
   },
 ];

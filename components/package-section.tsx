@@ -1,7 +1,7 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Check, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
+import { Check, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const features = [
   "Gestellung von Gitterboxen, Mulden und Container",
@@ -11,7 +11,7 @@ const features = [
   "An- und Verkauf Remarketinggeräte",
   "Jährliche Mengenstromnachweise",
   "Datenträgervernichtung mit Zertifikat",
-]
+];
 
 export function PackageSection() {
   return (
@@ -49,7 +49,7 @@ export function PackageSection() {
                 asChild
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                <Link href="/kontakt">
+                <Link href="/kontakt.html">
                   Jetzt anfragen
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -70,5 +70,5 @@ export function PackageSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

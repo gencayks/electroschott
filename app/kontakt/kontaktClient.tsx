@@ -1,13 +1,11 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent } from "@/components/ui/card"
-import { useState } from "react"
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent } from "@/components/ui/card";
 
 const contactInfo = [
   {
@@ -32,7 +30,7 @@ const contactInfo = [
     title: "Öffnungszeiten",
     lines: ["Mo - Fr: 8:00 - 17:00 Uhr"],
   },
-]
+];
 
 const departments = [
   {
@@ -50,22 +48,9 @@ const departments = [
     phone: null,
     email: "dispo@an-electrorecycling.de",
   },
-]
+];
 
 export default function KontaktClient() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formState)
-  }
-
   return (
     <>
       {/* Hero */}
@@ -76,8 +61,8 @@ export default function KontaktClient() {
               Kontaktieren Sie uns
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Füllen Sie das Kontaktformular aus, wenn Sie weitere Informationen wünschen. Wir melden uns dann bei
-              Ihnen.
+              Füllen Sie das Kontaktformular aus, wenn Sie weitere Informationen
+              wünschen. Wir melden uns dann bei Ihnen.
             </p>
           </div>
         </div>
@@ -89,16 +74,33 @@ export default function KontaktClient() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Nachricht senden</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                Nachricht senden
+              </h2>
+              <form
+                action="/contact-form.php"
+                method="POST"
+                className="space-y-6"
+              >
+                <div className="hidden" aria-hidden="true">
+                  <Label htmlFor="website">Website</Label>
+                  <Input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
                     <Input
                       id="name"
+                      name="name"
+                      autoComplete="name"
                       required
-                      value={formState.name}
-                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       className="bg-card border-border"
                     />
                   </div>
@@ -106,8 +108,8 @@ export default function KontaktClient() {
                     <Label htmlFor="company">Firma</Label>
                     <Input
                       id="company"
-                      value={formState.company}
-                      onChange={(e) => setFormState({ ...formState, company: e.target.value })}
+                      name="company"
+                      autoComplete="organization"
                       className="bg-card border-border"
                     />
                   </div>
@@ -118,10 +120,10 @@ export default function KontaktClient() {
                     <Label htmlFor="email">E-Mail *</Label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
+                      autoComplete="email"
                       required
-                      value={formState.email}
-                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       className="bg-card border-border"
                     />
                   </div>
@@ -129,9 +131,9 @@ export default function KontaktClient() {
                     <Label htmlFor="phone">Telefon</Label>
                     <Input
                       id="phone"
+                      name="phone"
                       type="tel"
-                      value={formState.phone}
-                      onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
+                      autoComplete="tel"
                       className="bg-card border-border"
                     />
                   </div>
@@ -141,10 +143,9 @@ export default function KontaktClient() {
                   <Label htmlFor="message">Ihre Nachricht *</Label>
                   <Textarea
                     id="message"
+                    name="message"
                     required
                     rows={6}
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     className="bg-card border-border resize-none"
                   />
                 </div>
@@ -162,7 +163,9 @@ export default function KontaktClient() {
 
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">A&N Electrorecycling GmbH & Co. KG</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                A&N Electrorecycling GmbH & Co. KG
+              </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {contactInfo.map((info) => (
@@ -173,7 +176,9 @@ export default function KontaktClient() {
                           <info.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h3 className="font-medium text-foreground text-sm">{info.title}</h3>
+                          <h3 className="font-medium text-foreground text-sm">
+                            {info.title}
+                          </h3>
                           {info.lines.map((line, i) =>
                             info.href ? (
                               <a
@@ -184,7 +189,10 @@ export default function KontaktClient() {
                                 {line}
                               </a>
                             ) : (
-                              <p key={i} className="text-sm text-muted-foreground">
+                              <p
+                                key={i}
+                                className="text-sm text-muted-foreground"
+                              >
                                 {line}
                               </p>
                             ),
@@ -196,10 +204,15 @@ export default function KontaktClient() {
                 ))}
               </div>
 
-              <h3 className="text-lg font-semibold text-foreground mb-4">Abteilungen</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">
+                Abteilungen
+              </h3>
               <div className="space-y-4">
                 {departments.map((dept) => (
-                  <div key={dept.name} className="border-l-2 border-primary pl-4">
+                  <div
+                    key={dept.name}
+                    className="border-l-2 border-primary pl-4"
+                  >
                     <h4 className="font-medium text-foreground">{dept.name}</h4>
                     {dept.phone && (
                       <a
@@ -220,8 +233,12 @@ export default function KontaktClient() {
               </div>
 
               <div className="mt-8 p-4 bg-card rounded-lg border border-border">
-                <h4 className="font-medium text-foreground mb-2">Vertretungsberechtige Gesellschafter</h4>
-                <p className="text-sm text-muted-foreground">Nihat Altun und Adem Coban</p>
+                <h4 className="font-medium text-foreground mb-2">
+                  Vertretungsberechtige Gesellschafter
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Nihat Altun und Adem Coban
+                </p>
               </div>
             </div>
           </div>
@@ -243,5 +260,5 @@ export default function KontaktClient() {
         />
       </section>
     </>
-  )
+  );
 }

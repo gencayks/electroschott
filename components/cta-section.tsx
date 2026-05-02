@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { ArrowRight, Phone, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { ArrowRight, Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
@@ -23,7 +23,7 @@ export function CTASection() {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8"
                 >
-                  <Link href="/kontakt">
+                  <Link href="/kontakt.html">
                     Kontakt aufnehmen
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -81,5 +81,5 @@ export function CTASection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

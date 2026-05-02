@@ -5,17 +5,20 @@ import { Phone, Mail, MapPin, Clock, ChevronRight, Award } from "lucide-react";
 const navigation = {
   main: [
     { name: "Startseite", href: "/" },
-    { name: "Leistungen", href: "/leistungen" },
-    { name: "Philosophie", href: "/philosophie" },
-    { name: "Richtlinien", href: "/richtlinien" },
-    { name: "Zertifikate", href: "/zertifikate" },
-    { name: "Kontakt", href: "/kontakt" },
+    { name: "Leistungen", href: "/leistungen.html" },
+    { name: "Philosophie", href: "/philosophie.html" },
+    { name: "Richtlinien", href: "/richtlinien.html" },
+    { name: "Zertifikate", href: "/zertifikate.html" },
+    { name: "Kontakt", href: "/kontakt.html" },
   ],
   services: [
-    { name: "Recycling", href: "/leistungen#recycling" },
-    { name: "Datenträgervernichtung", href: "/leistungen#datenvernichtung" },
-    { name: "Industriedemontage", href: "/leistungen#industriedemontage" },
-    { name: "Logistik", href: "/leistungen#logistik" },
+    { name: "Recycling", href: "/leistungen.html#recycling" },
+    {
+      name: "Datenträgervernichtung",
+      href: "/leistungen.html#datenvernichtung",
+    },
+    { name: "Industriedemontage", href: "/leistungen.html#industriedemontage" },
+    { name: "Logistik", href: "/leistungen.html#logistik" },
   ],
 };
 
@@ -39,7 +42,7 @@ export function Footer() {
               </div>
             </div>
             <Link
-              href="/zertifikate"
+              href="/zertifikate.html"
               className="inline-flex items-center gap-2 text-sm font-medium text-primary-foreground hover:text-primary-foreground/80 transition-colors"
             >
               Zertifikate ansehen
@@ -170,19 +173,19 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <Link
-                href="/impressum"
+                href="/richtlinien.html"
                 className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Impressum
               </Link>
               <Link
-                href="/datenschutz"
+                href="/richtlinien.html"
                 className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Datenschutz
               </Link>
               <Link
-                href="/richtlinien"
+                href="/richtlinien.html"
                 className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 Richtlinien
