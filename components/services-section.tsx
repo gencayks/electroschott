@@ -1,6 +1,6 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Recycle, HardDrive, Factory, Truck, ArrowRight } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Recycle, HardDrive, Factory, Truck, ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -17,7 +17,7 @@ const services = [
     description:
       "Vernichtung gemäß Bundesdatenschutzgesetz BDSG gemäß DIN 66399-2:2012-10: H5 und DS-GVO mit Vernichtungszertifikat.",
     href: "/leistungen#datenvernichtung",
-    image: "/industrial-hard-drive-shredder-data-destruction-ma.jpg",
+    image: "/team1.jpg",
   },
   {
     icon: Factory,
@@ -25,7 +25,7 @@ const services = [
     description:
       "Fachgerechtes Zerlegen und Entsorgung nicht mehr benötigter Maschinen und Anlagen.",
     href: "/leistungen#industriedemontage",
-    image: "/industrial-dismantling-warehouse-machinery-profess.jpg",
+    image: "/whatsapp-image.jpg",
   },
   {
     icon: Truck,
@@ -35,7 +35,7 @@ const services = [
     href: "/leistungen#logistik",
     image: "/logistics-trucks-fleet-container-transport-recycli.jpg",
   },
-]
+];
 
 export function ServicesSection() {
   return (
@@ -49,8 +49,8 @@ export function ServicesSection() {
             Komplettlösungen für Ihr Unternehmen
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground leading-relaxed">
-            Nutzen Sie unsere kostenlose und unverbindliche Beratung zu
-            Lösungen und Konzepten im Sinne des ElektroG.
+            Nutzen Sie unsere kostenlose und unverbindliche Beratung zu Lösungen
+            und Konzepten im Sinne des ElektroG.
           </p>
         </div>
 
@@ -95,5 +95,5 @@ export function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
