@@ -1,6 +1,6 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Phone, Mail, MapPin, Clock, ChevronRight, Award } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Phone, Mail, MapPin, Clock, ChevronRight, Award } from "lucide-react";
 
 const navigation = {
   main: [
@@ -17,7 +17,7 @@ const navigation = {
     { name: "Industriedemontage", href: "/leistungen#industriedemontage" },
     { name: "Logistik", href: "/leistungen#logistik" },
   ],
-}
+};
 
 export function Footer() {
   return (
@@ -33,7 +33,9 @@ export function Footer() {
                 <p className="font-semibold text-primary-foreground text-sm sm:text-base">
                   Zertifizierter Entsorgungsfachbetrieb
                 </p>
-                <p className="text-xs sm:text-sm text-primary-foreground/80">Nach §§ 56 und 57 KrWG</p>
+                <p className="text-xs sm:text-sm text-primary-foreground/80">
+                  Nach §§ 56 und 57 KrWG
+                </p>
               </div>
             </div>
             <Link
@@ -48,10 +50,13 @@ export function Footer() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           {/* Brand - Larger footer logo with 3D effect */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-block">
+          <div className="text-center sm:col-span-2 sm:text-left lg:col-span-1">
+            <Link
+              href="/"
+              className="inline-flex rounded-sm bg-white px-2 py-2 shadow-md ring-1 ring-black/5"
+            >
               <Image
                 src="/logo.png"
                 alt="A&N Electrorecycling Logo"
@@ -60,23 +65,26 @@ export function Footer() {
                 className="h-12 w-auto logo-3d"
               />
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Zertifizierter Entsorgungsfachbetrieb mit jahrzehntelanger Erfahrung im ressourcenschonenden Recycling von
-              Elektro- und Elektronikaltgeräten.
+            <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground sm:mx-0">
+              Zertifizierter Entsorgungsfachbetrieb mit jahrzehntelanger
+              Erfahrung im ressourcenschonenden Recycling von Elektro- und
+              Elektronikaltgeräten.
             </p>
           </div>
 
           {/* Navigation */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Navigation</h3>
+          <div className="text-center sm:text-left">
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              Navigation
+            </h3>
             <ul className="mt-4 space-y-3">
               {navigation.main.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="group inline-flex items-center justify-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary sm:justify-start"
                   >
-                    <ChevronRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    <ChevronRight className="hidden h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100 sm:block" />
                     {item.name}
                   </Link>
                 </li>
@@ -85,16 +93,18 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Leistungen</h3>
+          <div className="text-center sm:text-left">
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              Leistungen
+            </h3>
             <ul className="mt-4 space-y-3">
               {navigation.services.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="group inline-flex items-center justify-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary sm:justify-start"
                   >
-                    <ChevronRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    <ChevronRight className="hidden h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100 sm:block" />
                     {item.name}
                   </Link>
                 </li>
@@ -103,10 +113,12 @@ export function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Kontakt</h3>
+          <div className="text-center sm:text-left">
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              Kontakt
+            </h3>
             <ul className="mt-4 space-y-4">
-              <li className="flex items-start gap-3">
+              <li className="flex items-start justify-center gap-3 sm:justify-start">
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 flex-shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4 text-primary" />
                 </div>
@@ -119,7 +131,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+4962186239700"
-                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center justify-center gap-3 text-sm text-muted-foreground transition-colors hover:text-primary sm:justify-start"
                 >
                   <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 flex-shrink-0">
                     <Phone className="w-4 h-4 text-primary" />
@@ -130,15 +142,17 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:dispo@an-electrorecycling.de"
-                  className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                  className="flex items-center justify-center gap-3 text-sm text-muted-foreground transition-colors hover:text-primary sm:justify-start"
                 >
                   <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 flex-shrink-0">
                     <Mail className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="break-all">dispo@an-electrorecycling.de</span>
+                  <span className="break-all">
+                    dispo@an-electrorecycling.de
+                  </span>
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
+              <li className="flex items-center justify-center gap-3 text-sm text-muted-foreground sm:justify-start">
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 flex-shrink-0">
                   <Clock className="w-4 h-4 text-primary" />
                 </div>
@@ -151,7 +165,8 @@ export function Footer() {
         <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} A&N Electrorecycling GmbH & Co. KG. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} A&N Electrorecycling GmbH & Co. KG.
+              Alle Rechte vorbehalten.
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <Link
@@ -177,5 +192,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
