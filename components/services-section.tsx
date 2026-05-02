@@ -25,7 +25,7 @@ const services = [
     description:
       "Fachgerechtes Zerlegen und Entsorgung nicht mehr benötigter Maschinen und Anlagen.",
     href: "/leistungen#industriedemontage",
-    image: "/industrial-dismantling-warehouse-machinery-profess.jpg",
+    image: "/industriedemontage-workshop.jpg",
   },
   {
     icon: Truck,

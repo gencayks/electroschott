@@ -225,8 +225,8 @@ export default function LeistungenPage() {
 
             <div>
               <img
-                src="/industrial-dismantling-warehouse-machinery-profess.jpg"
-                alt="Industriedemontage"
+                src="/industriedemontage-workshop.jpg"
+                alt="Industriedemontage Werkstatt mit Elektrowerkzeugen"
                 className="rounded-lg w-full h-auto object-cover"
               />
             </div>
